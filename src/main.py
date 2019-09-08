@@ -56,13 +56,13 @@ def main():
     return "<h1>hola</h1>"
 
 
-@app.route("/content/<int:_id>")
+@app.route("/article/<int:_id>")
 def test(_id):
     page = Page.query.get_or_404(_id)
     context = {
         'title': page.title,
         'cards': [
-            {'content': card.content, 'created': card.created_at}
+            {'content': card.content, 'created': card.created_at, 'tags': ['definicion', 'trivia', 'historia de vida', 'ques eyo']}
         for card in page.cards]
     }
     return render_template('content.html', **context)

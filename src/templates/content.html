@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+  <body>
+    <div class="container">
+      <h1>{{title}}</h1>
+      <section>
+
+        {% for card in cards: %}
+            <article class="card">
+              <div class="card-navegacion" >
+                <ul>
+                  <li>Autor</li>
+                  <li>{{card.created.isoformat()}}</li>
+                  <li><a href="#"> Editar</a></li>
+                </ul>
+              </div>
+              <div class="card-contenido">
+                <p>{{card.content}}</p>
+              </div>
+              <div class="card-tags">
+                <ul>
+                  {% for tag in card.tags: %}
+                      <li>{{tag}}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </article>
+        {% endfor %}
+
+      </section>
+    </div>
+      
+
+  </body>
+</html>
+    
