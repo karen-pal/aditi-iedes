@@ -29,7 +29,13 @@ class Page(BaseModel):
     __tablename__ = 'page'
     title = db.Column(db.Text)
     cards = db.relationship("Card", backref="page", lazy=True)
-
+    _slug = db.Column(db.String(150), nullable=False)
+    @property
+    def slug(self):
+        return self._slug
+    @slug.setter
+    def slug(self, value):
+        self._slug = slugify(value)
 
 class Card(BaseModel):
     __tablename__ = 'card'
