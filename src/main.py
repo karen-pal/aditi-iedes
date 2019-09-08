@@ -1,6 +1,6 @@
 import datetime
 
-from flask import Flask
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -56,9 +56,17 @@ def main():
     return "<h1>hola</h1>"
 
 
-@app.route("/test/<name>")
-def test(name):
-    return "Hello %s" % name
+@app.route("/content/<int:_id>")
+def test(_id):
+    page = Page.query.get_or_404(_id)
+    context = {
+        'title': page.title,
+        'cards': [
+            {'content': card.content, 'created': card.created_at}
+        for card in page.cards]
+    }
+    return render_template('content.html', **context)
+
 
 
 if __name__ == "__main__":
