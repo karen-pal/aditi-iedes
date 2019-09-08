@@ -2,8 +2,10 @@ import main
 
 main.db.create_all()
 
+title = 'Heteronormatividad'
+
 tag = main.Tag(tag_name='definición')
-page = main.Page(title='heteronormatividad')
+page = main.Page(title=title, slug=title)
 
 cards = [main.Card(card_type='text', page=page, content="""
 Heteronorma o heteronormatividad es un régimen impuesto en la sociedad, en ámbito político y económico que impone las relaciones sexual-afectivas heterosexuales mediante diversos mecanismos médicos, artísticos, educativos, religiosos, jurídicos, etc. y mediante diversas instituciones que presentan la heterosexualidad.

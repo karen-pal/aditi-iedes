@@ -1,7 +1,8 @@
 import datetime
 
-from flask import Flask, render_template
+from slugify import slugify
 from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, render_template, abort
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:////tmp/test.db"
@@ -20,32 +21,35 @@ class BaseModel(db.Model):
 
 
 class AdminUser(BaseModel):
-    __tablename__ = 'admin'
+    __tablename__ = "admin"
     username = db.Column(db.String(80), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
 
 
 class Page(BaseModel):
-    __tablename__ = 'page'
+    __tablename__ = "page"
     title = db.Column(db.Text)
     cards = db.relationship("Card", backref="page", lazy=True)
     _slug = db.Column(db.String(150), nullable=False)
+
     @property
     def slug(self):
         return self._slug
+
     @slug.setter
     def slug(self, value):
         self._slug = slugify(value)
 
+
 class Card(BaseModel):
-    __tablename__ = 'card'
+    __tablename__ = "card"
     card_type = db.Column(db.String(80))
     page_id = db.Column(db.Integer, db.ForeignKey("page.id"))
     content = db.Column(db.Text)
 
 
 class Tag(BaseModel):
-    __tablename__ = 'tag'
+    __tablename__ = "tag"
     tag_name = db.Column(db.String(80))
 
 
@@ -57,22 +61,40 @@ tags = db.Table(
 )
 
 
-@app.route("/")
-def main():
-    return "<h1>hola</h1>"
-
-
-@app.route("/article/<int:_id>")
-def test(_id):
-    page = Page.query.get_or_404(_id)
-    context = {
-        'title': page.title,
-        'cards': [
-            {'content': card.content, 'created': card.created_at, 'tags': ['definicion', 'trivia', 'historia de vida', 'ques eyo']}
-        for card in page.cards]
+def _page_to_ctx(page):
+    return {
+        "title": page.title,
+        "slug": page.slug,
+        "cards": [
+            {
+                "content": card.content,
+                "created": card.created_at,
+                "tags": ["definicion", "trivia", "historia de vida", "ques eyo"],
+            }
+            for card in page.cards
+        ],
     }
-    return render_template('content.html', **context)
 
+
+@app.route("/")
+def home():
+    page = Page.query.order_by(Page.id.desc()).first()
+    context = _page_to_ctx(page)
+    return render_template("home.html", **context)
+
+
+@app.route("/article/<slug>")
+def article(slug):
+    page = Page.query.filter_by(_slug=slug).first()
+    if not page:
+        abort(404)
+    context = _page_to_ctx(page)
+    return render_template("content.html", **context)
+
+@app.route('/edit/<int:_id>')
+def edit(_id):
+    page = Page.query.get_or_404(_id)
+    return render_template('edit.html', page=page)
 
 
 if __name__ == "__main__":

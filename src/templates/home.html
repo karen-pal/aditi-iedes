@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width; inicial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>pagina de inicio</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    </head>
+    <body>
+        <h1>Home</h1>
+        <section id="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/LAKGBzcKF5c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <section>
+          <section>
+            <h2>Últimas contribuciones</h2>
+            <article class="card">
+              <div class="card-navegacion">
+                <ul>
+                  <li>Autor</li>
+                  <li>Fecha</li>
+                  <li><a href="/edicion.html"> Editar</a></li>
+                </ul>
+              </div>
+              <div class="card-contenido">
+                  <b>{{title}}</b><p>{{cards[0].content}}</p>
+                  <a href="{{url_for('article', slug=slug)}}">Leer mas...</a>
+              </div>
+              <div class="card-tags">
+                <ul>
+                  {% for tag in cards[0].tags: %}
+                      <li>{{tag}}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </article>
+          </section>
+          <section>
+            <h2>Últimas historias</h2>
+          </section>
+        </section>
+    </body>
+</html>
