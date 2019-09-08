@@ -10,6 +10,13 @@
     --gris: #f5f5f5;
     --yellow: #fde24d;
     --darkGreen: #245c61;
+    --rojo: #dd342f;
+    --naranja: #eb863a;
+    --amarillo: #f7374d;
+    --verde: #387d26;
+    --azul: #0648ef;
+    --azulOscuro: #002990;
+    --documentGap: 2rem;
     font-size: 18px;
 }
 /* html {
@@ -19,24 +26,99 @@ body {
     font-family: 'Poppins', helvetica, sans-serif;
     color: #333;
     font-size: 1rem;
+    margin: 0;
+}
+section {
+    margin-bottom: var(--documentGap);
 }
 a {
-    color: var(--green);
+    color: var(--azul);
     transition: var(--transition);
 }
+video,
+img {
+    width: 100%;
+}
+
 a:hover {
-    color: var(--darkGreen);
+    color: var(--azulOscuro);
 }
 .container {
     max-width: 960px;
-    width: 100%;
+    width: 90%;
     margin: 2rem auto 0;
 }
+/* helper */
+.text-bold {
+    font-weight: 600;
+    color: var(--green);
+}
+.text-center {
+    text-align: center;
+}
+.active {
+    font-weight: 600;
+    color: var(--blue);
+}
+.header {
+    margin-bottom: var(--documentGap);
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header ul {
+    list-style: none;
+}
+.header li {
+    display: inline-block;
+}
+.header a {
+    text-decoration: none;
+    color: var(--blue);
+    transition: var(--transition);
+}
+.header a:hover {
+    color: var(--green);
+}
+.header li:not(:last-of-type) {
+    margin-right: 1rem;
+}
+/* seccion categorias */
+.seccion-categorias {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.categorias {
+    flex: 1 1 100%;
+    background: var(--yellow);
+    text-align: center;
+    margin: 0.4rem 0;
+    color: var(--white);
+}
+/* cards */
+
 .card {
     background: var(--gris);
     padding: 1.4rem;
     border-radius: 10px;
-    box-shadow: 0 0 5px 5px #eee;
+    box-shadow: 0 0 7px 5px #ddd;
+    margin: 2rem 0;
+}
+.card-title {
+    margin-top: 0;
+    font-size: 1.6rem;
+    transition: var(--transition);
+}
+.card-title:hover {
+    color: var(--green);
+}
+
+.card-link {
+
 }
 .card ul {
     list-style: none;
@@ -53,7 +135,27 @@ a:hover {
 .card-tags ul {
     margin-bottom: 0;
 }
+[class|="tag"] {
+    background: var(--yellow);
+    padding: 3px 20px;
+    color: var(--white);
+}
+[class|="tag"]:hover {
+    transition: var(--transition);
+    background: var(--yellow);
+    color: var(--blue);
+}
+.tag-definicion {
+    background: var(--rojo);
+}
+.tag-historia {
+    background: var(--naranja);
+}
+.tag-bio {
+    background: var(--verde);
+}
 
+/* formulario */
 .form-group {
     margin: 10px 0;
 }
@@ -78,9 +180,13 @@ select {
     background: transparent;
 }
 button {
-    background: deeppink;
-    color: #fff;
+    background: var(--azul);
+    color: var(--white);
     padding: 7px 30px;
     border: 0;
     border-radius: 5px;
+    transition: var(--transition);
+}
+button:hover {
+     background: var(--azulOscuro);
 }

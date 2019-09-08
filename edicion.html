@@ -9,38 +9,53 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container">
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <img src="images/logo.jpeg" alt="Logo del Instituto IEDES">
+        </div>
+        <nav class="navigation">
+          <ul>
+            <li><a href="home.html">Inicio</a></li>
+            <li><a href="articulo.html">Articulo 1</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
         <h1>Título página edición</h1>
         <form action="" id="formulario">
-            <div class="form-group">
-                <label for="title">Título del artículo</label>
-                <input type="text" name="title" id="title" placeholder="título del artículo">
-            </div>
-            <div class="form-group">
-                <label for="tipo">Tipo de Contribución</label>
-                <small>Elige la categoria a la que pertenece tu contribución</small>
-                <select name="tipo" id="tipo">
-                    <option value="0">Elige un tipo de contribución</option>
-                    <option value="Biografía">Biografía</option>
-                    <option value="Definición">Definición</option>
-                    <option value="Historia">Historia</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="categories">Categorías del artículo</label>
-                <small>Coloca hasta 5 categorias a la que pertenece tu artículo</small>
-                <input type="text" name="categories" id="categories">
-            </div>
-            <div class="form-group">
-                <label for="contenido">Agrega el contenido de tu artículo</label>
-                <small>Hasta un máximo de 300 caracteres.</small>
-                <textarea name="contenido" id="contenido"></textarea>
-            </div> 
-            <div class="form-group">
-                <div id="form-messages"></div>
-                <button>enviar</button>
-            </div>
+          <div class="form-group">
+            <label for="title">Título del artículo</label>
+            <input type="text" name="title" id="title" placeholder="título del artículo">
+          </div>
+          <div class="form-group">
+            <label for="tipo">Tipo de Contribución</label>
+            <small>Elige la categoria a la que pertenece tu contribución</small>
+            <select name="tipo" id="tipo">
+              <option value="0">Elige un tipo de contribución</option>
+              <option value="Biografía">Biografía</option>
+              <option value="Definición">Definición</option>
+              <option value="Historia">Historia</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="categories">Categorías del artículo</label>
+            <small>Coloca hasta 5 categorias a la que pertenece tu artículo</small>
+            <input type="text" name="categories" id="categories">
+          </div>
+          <div class="form-group">
+            <label for="contenido">Agrega el contenido de tu artículo</label>
+            <small>Hasta un máximo de 300 caracteres.</small>
+            <textarea name="contenido" id="contenido"></textarea>
+          </div>
+          <div class="form-group">
+            <div id="form-messages"></div>
+            <button>enviar</button>
+          </div>
         </form>
-    </div>
+      </div>
+    </main>
 </body>
 </html>
