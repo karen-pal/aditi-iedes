@@ -6,41 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Página edición</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-    <div class="container">
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <img src="/static/images/logo.jpeg" alt="Logo del Instituto IEDES">
+        </div>
+        <nav class="navigation">
+          <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="{{url_for('article', slug=page.slug)}}">{{page.title}}</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
         <h1>Título página edición</h1>
         <form action="" id="formulario">
-            <div class="form-group">
-                <label for="title">Título del artículo</label>
-                <input type="text" name="title" id="title" placeholder="título del artículo">
-            </div>
-            <div class="form-group">
-                <label for="tipo">Tipo de Contribución</label>
-                <small>Elige la categoria a la que pertenece tu contribución</small>
-                <select name="tipo" id="tipo">
-                    <option value="0">Elige un tipo de contribución</option>
-                    <option value="Biografía">Biografía</option>
-                    <option value="Definición">Definición</option>
-                    <option value="Historia">Historia</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="categories">Categorías del artículo</label>
-                <small>Coloca hasta 5 categorias a la que pertenece tu artículo</small>
-                <input type="text" name="categories" id="categories">
-            </div>
-            <div class="form-group">
-                <label for="contenido">Agrega el contenido de tu artículo</label>
-                <small>Hasta un máximo de 300 caracteres.</small>
-                <textarea name="contenido" id="contenido"></textarea>
-            </div> 
-            <div class="form-group">
-                <div id="form-messages"></div>
-                <button>enviar</button>
-            </div>
+          <div class="form-group">
+            <label for="title">Título del artículo</label>
+            <input type="text" name="title" id="title" placeholder="título del artículo" value="{{page.title}}">
+          </div>
+          <div class="form-group">
+            <label for="tipo">Tipo de Contribución</label>
+            <small>Elige la categoria a la que pertenece tu contribución</small>
+            <select name="tipo" id="tipo">
+              <option value="0">Elige un tipo de contribución</option>
+              <option value="Biografía">Biografía</option>
+              <option value="Definición">Definición</option>
+              <option value="Historia">Historia</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="categories">Categorías del artículo</label>
+            <small>Coloca hasta 5 categorias a la que pertenece tu artículo</small>
+            <input type="text" name="categories" id="categories", value="Biografia, historia">
+          </div>
+          <div class="form-group">
+            <label for="contenido">Agrega el contenido de tu artículo</label>
+            <small>Hasta un máximo de 300 caracteres.</small>
+            <textarea name="contenido" id="contenido">{{page.cards[0].content}}</textarea>
+          </div>
+          <div class="form-group">
+            <div id="form-messages"></div>
+            <button>enviar</button>
+          </div>
         </form>
-    </div>
+      </div>
+    </main>
 </body>
 </html>

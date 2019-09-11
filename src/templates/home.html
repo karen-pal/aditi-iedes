@@ -6,40 +6,69 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>pagina de inicio</title>
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
     </head>
     <body>
-        <h1>Home</h1>
+      <header class="header">
+        <div class="container">
+          <div class="logo">
+            <img src="static/images/logo.jpeg" alt="Logo del Instituto IEDES">
+          </div>
+          <nav class="navigation">
+            <ul>
+              <li><a class="active" href="home.html">Inicio</a></li>
+              <li><a href="articulo.html">Articulo 1</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="main">
         <section id="video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/LAKGBzcKF5c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="100%" height="400" src="https://www.youtube.com/embed/LAKGBzcKF5c" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
-        <section>
-          <section>
-            <h2>Últimas contribuciones</h2>
-            <article class="card">
-              <div class="card-navegacion">
-                <ul>
-                  <li>Autor</li>
-                  <li>Fecha</li>
-                  <li><a href="/edicion.html"> Editar</a></li>
-                </ul>
-              </div>
-              <div class="card-contenido">
-                  <b>{{title}}</b><p>{{cards[0].content}}</p>
-                  <a href="{{url_for('article', slug=slug)}}">Leer mas...</a>
-              </div>
-              <div class="card-tags">
-                <ul>
-                  {% for tag in cards[0].tags: %}
-                      <li>{{tag}}</li>
-                  {% endfor %}
-                </ul>
-              </div>
+        <section class="container">
+          <section class="seccion-categorias">
+            <h2>Nuestras historias</h2>
+            <article class="tag-definicion categorias">
+              <h3>Definiciones</h3>
+            </article>
+            <article class="tag-historia categorias">
+              <h3>Historias</h3>
+            </article>
+            <article class="tag-bio categorias">
+              <h3>Biografías</h3>
             </article>
           </section>
-          <section>
-            <h2>Últimas historias</h2>
+          <section class="seccion-articulos">
+            <h2 class="text-center">Últimas contribuciones</h2>
+            {% for page in pages: %}
+                <article class="card">
+                    <h3 class="card-title"><a href="{{url_for('article', slug=page.slug)}}">{{page.title}}</a></h3>
+                  <div class="card-navegacion">
+                    <ul>
+                      <li>Autor: <span class="text-bold">Juan Perez</span></li>
+                      <li>Fecha: <span class="text-bold">{{page.created.isoformat()}}</span></li>
+                      <li><a href="{{url_for('edit', _id=page.id)}}"> Editar</a></li>
+                    </ul>
+                  </div>
+                  <div class="card-contenido">
+                      <p>{{page.cards[0].content}}</p>
+                  </div>
+                  <div class="card-link">
+                  <a href="{{url_for('article', slug=page.slug)}}">Ir al Artículo</a>
+                  </div>
+                  <div class="card-tags">
+                    <ul>
+                      <li class="tag-definicion">Definición</li>
+                      <li class="tag-historia">Historia</li>
+                      <li class="tag-bio">Biografía</li>
+                    </ul>
+                  </div>
+                </article>
+            {% endfor %}
           </section>
         </section>
+      </main>
     </body>
 </html>

@@ -64,12 +64,14 @@ tags = db.Table(
 def _page_to_ctx(page):
     return {
         "title": page.title,
+        "id": page.id,
         "slug": page.slug,
+        "created": page.created_at,
         "cards": [
             {
                 "content": card.content,
                 "created": card.created_at,
-                "tags": ["definicion", "trivia", "historia de vida", "ques eyo"],
+                "tags": ['definicion', 'historia', 'biografia'],
             }
             for card in page.cards
         ],
@@ -78,9 +80,9 @@ def _page_to_ctx(page):
 
 @app.route("/")
 def home():
-    page = Page.query.order_by(Page.id.desc()).first()
-    context = _page_to_ctx(page)
-    return render_template("home.html", **context)
+    pages = Page.query.order_by(Page.id.desc()).all()
+    context = [_page_to_ctx(page) for page in pages]
+    return render_template("home.html", pages=context)
 
 
 @app.route("/article/<slug>")

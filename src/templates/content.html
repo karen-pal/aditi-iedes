@@ -7,36 +7,46 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
   <body>
-    <div class="container">
-      <h1>{{title}}</h1>
-      <section>
-
-        {% for card in cards: %}
-            <article class="card">
-              <div class="card-navegacion" >
-                <ul>
-                  <li>Autor</li>
-                  <li>{{card.created.isoformat()}}</li>
-                  <li><a href="#"> Editar</a></li>
-                </ul>
-              </div>
-              <div class="card-contenido">
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <img src="/static/images/logo.jpeg" alt="Logo del Instituto IEDES">
+        </div>
+        <nav class="navigation">
+          <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a class="active" href="#">{{title}}</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+      <h1> {{title}}</h1>
+        <section>
+        {% for card in cards %}
+          <article class="card">
+            <div class="card-navegacion">
+              <ul>
+                <li>Autor: <span class="text-bold">Juan Perez</span></li>
+                <li>Fecha: <span class="text-bold">{{created}}</span></li>
+                <li><a href="{{url_for('edit', _id=id)}}"> Editar</a></li>
+              </ul>
+            </div>
+            <div class="card-contenido">
                 <p>{{card.content}}</p>
-              </div>
-              <div class="card-tags">
-                <ul>
-                  {% for tag in card.tags: %}
-                      <li>{{tag}}</li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </article>
-        {% endfor %}
-
-      </section>
-    </div>
-      
-
+            </div>
+             <div class="card-tags">
+              <ul>
+                {% for tag in card.tags: %}
+                    <li class="tag-{{tag}}">{{tag}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </article>
+         {% endfor %}
+        </section>
+      </div>
+    </main>
   </body>
 </html>
-    
