@@ -2,3 +2,4 @@ flask
 flask-sqlalchemy
 pymysql
 python-slugify
+flask-admin
