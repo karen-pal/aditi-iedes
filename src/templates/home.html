@@ -44,19 +44,18 @@
             <h2 class="text-center">Últimas contribuciones</h2>
             {% for page in pages: %}
                 <article class="card">
-                    <h3 class="card-title"><a href="{{url_for('article', slug=page.slug)}}">{{page.title}}</a></h3>
+                    <h3 class="card-title"><a href="{{url_for('home.article', slug=page.slug)}}">{{page.title}}</a></h3>
                   <div class="card-navegacion">
                     <ul>
                       <li>Autor: <span class="text-bold">Juan Perez</span></li>
                       <li>Fecha: <span class="text-bold">{{page.created.isoformat()}}</span></li>
-                      <li><a href="{{url_for('edit', _id=page.id)}}">Editar</a></li>
                     </ul>
                   </div>
                   <div class="card-contenido">
                       <p>{{page.cards[0].content}}</p>
                   </div>
                   <div class="card-link">
-                  <a href="{{url_for('article', slug=page.slug)}}">Ir al Artículo</a>
+                  <a href="{{url_for('home.article', slug=page.slug)}}">Ir al Artículo</a>
                   </div>
                   <div class="card-tags">
                     <ul>
