@@ -10,6 +10,9 @@ from pages import edit
 
 app = Flask(__name__)
 models.db.init_app(app)
+with app.app_context():
+   models.db.create_all()
+
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/db.sql'
 app.config['FLASK_ADMIN_SWATCH'] = 'simplex'
