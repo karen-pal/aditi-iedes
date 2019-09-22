@@ -6808,7 +6808,7 @@ label.panel-block {
 }
 
 .center{
-  text-align: center;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6821,4 +6821,37 @@ label.panel-block {
 
 .bottom-border-green{
   border-bottom-color: #00b89c
+}
+
+.mas-espacio{
+  padding: 1rem;
+}
+
+.footer{
+  background: url(../img/photo_2019-09-21_16-57-27.jpg) top/ cover;
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; 
+  padding-top: 30px; 
+  height: 0; 
+  overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mas-espacio-izq{
+  padding-left: 5rem;
+}
+
+.mas-espacio-der{
+  padding-right: 5rem;
 }
