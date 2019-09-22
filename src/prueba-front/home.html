@@ -6,12 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>GENEROS</title>
         <link rel="stylesheet" href="css/main.css">
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-        <script src="js/script.js"></script>
+       
     </head>
 
     <body>
         <section class="hero is-transparent is-medium">
+            <!-- [[NAVBAR]] -->
             <nav class="navbar  is-transparent" role="navigation" aria-label="main navegation">
                 <div class="navbar-brand">
                     <a href="#" class="navbar-item"></a>
@@ -38,12 +38,16 @@
                 </div>
 
             </nav>
+
+            <!-- HERO PEOLA -->
             <div class="hero-body ">
                 <div class="container">
                     <h1 id="random-quote" class="title has-text-centered has-text-white-ter">Título objetivo conocimiento</h1>
                 </div>
             </div>
         </section>
+
+        <!-- ULTIMOS ARTICULOS -->
         <section class="section">
             <div class="container">
                 <div class="center">
@@ -51,8 +55,10 @@
                 </div>
                 <div class="columns">
                     <div class="column is-one-third"> 
-                        <article class="card">
-                            <div class="card-content">
+
+                        <!-- UN ARTICULO -->
+                        <article class="card ">
+                            <div class="card-content ultimos-articulos">
                                 <div class="media">
                                     <div class="media-content">
                                         <p class="title is-5">@Usuarix</p>
@@ -69,9 +75,39 @@
                                     </div>
                                 </div>
 
-                                <div class="content">
+                                <div class="content ">
                                     <p class="title">Título</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam veritatis possimus reprehenderit, sapiente officiis dolorem nulla, perferendis, ducimus libero tempora accusamus totam suscipit consectetur facere ratione. Optio, reiciendis voluptas.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam veritatis possimus reprehenderit, sapiente officiis dolorem nulla, perferendis, ducimus libero tempora accusamus totam suscipit consectetur facere ratione. Optio, reiciendis voluptas.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam veritatis possimus reprehenderit, sapiente officiis dolorem nulla, perferendis, ducimus libero tempora accusamus totam suscipit consectetur facere ratione. Optio, reiciendis voluptas.
+                                    </p>
+                                    <span class="read-more"><a class="button is-info " id="button-modal-1">Leer más</a></span>
+
+                                    <div class="modal" id="page-modal1">
+                                            <div class="modal-background"></div>
+                                            <div class="modal-card">
+                                              <header class="modal-card-head">
+                                                <p class="modal-card-title">Modal title</p>
+                                                <button class="delete"  aria-label="close"></button>
+                                              </header>
+                                              <section class="modal-card-body">
+                                                    <h1>Hello World</h1>
+                                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam veritatis possimus reprehenderit, sapiente officiis dolorem nulla, perferendis, ducimus libero tempora accusamus totam suscipit consectetur facere ratione. Optio, reiciendis voluptas.
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam veritatis possimus reprehenderit, sapiente officiis dolorem nulla, perferendis, ducimus libero tempora accusamus totam suscipit consectetur facere ratione. Optio, reiciendis voluptas. </p>
+                                                    <h2>SUbtitulo</h2>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facere sequi dolorem velit tenetur ea molestias maiores aliquid labore placeat ipsam est pariatur, praesentium minima quia ut! Natus, dolor quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, vero. Eos libero repellendus id reprehenderit velit blanditiis, labore perspiciatis! Necessitatibus quo consequuntur nesciunt doloribus possimus dolor eum. Illo, cum accusantium.</p>
+                                                    <h2>Otro mas</h2>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, saepe facilis sint dicta placeat nobis atque veniam quidem corporis sequi deserunt porro doloremque dolor ipsa asperiores dolore quod labore non!
+                                                    <ul>
+                                                        <li>aLGO</li>
+                                                        <li>aLGO</li>
+                                                        <li>aLGO</li>
+                                                        <li>aLGO</li>
+                                                    </ul>
+                                                    </p>
+                                              </section>
+                                              
+                                            </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card-footer mas-espacio">
@@ -81,14 +117,13 @@
                                     </a>
                                 </p>
                             </div>
-                            
-                            
-                        </article>
+                        </article> 
                     </div>
 
+                    <!-- UN ARTICULO -->
                     <div class="column is-one-third"> 
                         <article class="card">
-                                <div class="card-content">
+                                <div class="card-content ultimos-articulos">
                                     <div class="media">
                                         <div class="media-content">
                                             <p class="title is-5">@Usuarix</p>
@@ -107,7 +142,37 @@
     
                                     <div class="content">
                                         <p class="title">Título</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam veritatis possimus reprehenderit, sapiente officiis dolorem nulla, perferendis, ducimus libero tempora accusamus totam suscipit consectetur facere ratione. Optio, reiciendis voluptas.</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam veritatis possimus reprehenderit, sapiente officiis dolorem nulla, perferendis, ducimus libero tempora accusamus totam suscipit consectetur facere ratione. Optio, reiciendis voluptas.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam veritatis possimus reprehenderit, sapiente officiis dolorem nulla, perferendis, ducimus libero tempora accusamus totam suscipit consectetur facere ratione. Optio, reiciendis voluptas.
+                                       </p>
+                                        <span class="read-more"><a class="button is-info" id="button-modal-2">Leer más</a></span>
+
+                                        <div class="modal" id="page-modal2">
+                                                <div class="modal-background"></div>
+                                                <div class="modal-card">
+                                                  <header class="modal-card-head">
+                                                    <p class="modal-card-title">Modal title</p>
+                                                    <button class="delete"  aria-label="close"></button>
+                                                  </header>
+                                                  <section class="modal-card-body">
+                                                        <h1>Hello World</h1>
+                                                        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam veritatis possimus reprehenderit, sapiente officiis dolorem nulla, perferendis, ducimus libero tempora accusamus totam suscipit consectetur facere ratione. Optio, reiciendis voluptas.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam veritatis possimus reprehenderit, sapiente officiis dolorem nulla, perferendis, ducimus libero tempora accusamus totam suscipit consectetur facere ratione. Optio, reiciendis voluptas. </p>
+                                                        <h2>SUbtitulo</h2>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facere sequi dolorem velit tenetur ea molestias maiores aliquid labore placeat ipsam est pariatur, praesentium minima quia ut! Natus, dolor quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, vero. Eos libero repellendus id reprehenderit velit blanditiis, labore perspiciatis! Necessitatibus quo consequuntur nesciunt doloribus possimus dolor eum. Illo, cum accusantium.</p>
+                                                        <h2>Otro mas</h2>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, saepe facilis sint dicta placeat nobis atque veniam quidem corporis sequi deserunt porro doloremque dolor ipsa asperiores dolore quod labore non!
+                                                        <ul>
+                                                            <li>aLGO</li>
+                                                            <li>aLGO</li>
+                                                            <li>aLGO</li>
+                                                            <li>aLGO</li>
+                                                        </ul>
+                                                        </p>
+                                                  </section>
+                                                  
+                                                </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="card-footer mas-espacio">
@@ -121,10 +186,10 @@
                                 
                                 </article>
                     </div>
-                    
+                    <!-- UN ARTICULO -->
                     <div class="column is-one-third">
                         <article class="card">
-                                <div class="card-content">
+                                <div class="card-content ultimos-articulos">
                                     <div class="media">
                                         <div class="media-content">
                                             <p class="title is-5">@Usuarix</p>
@@ -143,9 +208,40 @@
     
                                     <div class="content">
                                         <p class="title">Título</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam veritatis possimus reprehenderit, sapiente officiis dolorem nulla, perferendis, ducimus libero tempora accusamus totam suscipit consectetur facere ratione. Optio, reiciendis voluptas.</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam veritatis possimus reprehenderit, sapiente officiis dolorem nulla, perferendis, ducimus libero tempora accusamus totam suscipit consectetur facere ratione. Optio, reiciendis voluptas.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam veritatis possimus reprehenderit, sapiente officiis dolorem nulla, perferendis, ducimus libero tempora accusamus totam suscipit consectetur facere ratione. Optio, reiciendis voluptas. 
+                                        </p>
+                                        
+                                        <span class="read-more"><a id="button-modal-3" class="button is-info">Leer más</a></span>
+                                        
+                                        <div class="modal" id="page-modal3">
+                                                <div class="modal-background"></div>
+                                                <div class="modal-card">
+                                                  <header class="modal-card-head">
+                                                    <p class="modal-card-title">Modal title</p>
+                                                    <button class="delete" aria-label="close"></button>
+                                                  </header>
+                                                  <section class="modal-card-body">
+                                                        <h1>Hello World</h1>
+                                                        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam veritatis possimus reprehenderit, sapiente officiis dolorem nulla, perferendis, ducimus libero tempora accusamus totam suscipit consectetur facere ratione. Optio, reiciendis voluptas.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam veritatis possimus reprehenderit, sapiente officiis dolorem nulla, perferendis, ducimus libero tempora accusamus totam suscipit consectetur facere ratione. Optio, reiciendis voluptas. </p>
+                                                        <h2>SUbtitulo</h2>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facere sequi dolorem velit tenetur ea molestias maiores aliquid labore placeat ipsam est pariatur, praesentium minima quia ut! Natus, dolor quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, vero. Eos libero repellendus id reprehenderit velit blanditiis, labore perspiciatis! Necessitatibus quo consequuntur nesciunt doloribus possimus dolor eum. Illo, cum accusantium.</p>
+                                                        <h2>Otro mas</h2>
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, saepe facilis sint dicta placeat nobis atque veniam quidem corporis sequi deserunt porro doloremque dolor ipsa asperiores dolore quod labore non!
+                                                        <ul>
+                                                            <li>aLGO</li>
+                                                            <li>aLGO</li>
+                                                            <li>aLGO</li>
+                                                            <li>aLGO</li>
+                                                        </ul>
+                                                        </p>
+                                                  </section>
+                                                  
+                                                </div>
+                                        </div>
                                     </div>
-                                </div>
+                                </div> 
                                 <div class="card-footer mas-espacio">
                                     <p class="buttons">
                                         <a href="" class="button">
@@ -164,11 +260,13 @@
         <section class="section">
             <div class="contanier">
                 <div class="columns ">
+                    <!-- VIDEO? -->
                     <div class="column is-half mas-espacio-izq">
                         <div class="content video-container">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/1dE4wGbqwwU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
+                    <!-- FAKE FORM -->
                     <div class="column is-half mas-espacio-der">
                         <div class="box">
                             <p class="title">Formulario Genero</p>
@@ -198,17 +296,36 @@
                                         <input class="input" type="text" placeholder="Text input">
                                     </div>
                             </div>
+                            <!-- SUCCES! -->
+                            <button id="button-modal-form" class="button is-danger" >Resultado</button>
+                            <div class="modal" id="page-modal-form">
+                                    <div class="modal-background"></div>
+                                    <div class="modal-content has-background-light">
+                                      
+                                      <p class="is-size-1 has-text-danger has-text-centered"> YEAAAAAA IS WORKIN</p>
+                                      <p class="is-size-3 has-text-danger has-text-centered">IS VALID </p>
+                                      <p class="is-size-1 has-text-danger has-text-centered">SUCESSSSSSSS</p>
+                                    </div>
+                                    <button class="modal-close is-large" aria-label="close"></button>
+                                  </div>
+                            
+                            <!-- SUCCES! -->
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+        <!-- EL FOOTER -->
         <footer class="footer">
             <div class="content has-text-centered">
-                <p>Me and the m /o\ na d /a</p>
+                <p class="autoras-grosas is-size-5 has-text-light has-text-centered">Yo and the m /o\ na d /a</p>
             </div>
         </footer>
     </body>
-
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap" rel="stylesheet"> 
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/script.js"></script>
+    
+    
 </html>

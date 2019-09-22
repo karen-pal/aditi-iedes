@@ -6855,3 +6855,23 @@ label.panel-block {
 .mas-espacio-der{
   padding-right: 5rem;
 }
+
+.ultimos-articulos{
+  max-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.autoras-grosas{
+  font-family: 'Cutive Mono', monospace;
+}
+
+.read-more{
+  position: absolute; 
+  bottom: 0; 
+  left: 0;
+  width: 100%; 
+  text-align: center; 
+  margin: 0; padding: 30px 0;
+  background-image: linear-gradient(to bottom, transparent, #b8bdbc);
+}
