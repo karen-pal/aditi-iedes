@@ -19,6 +19,13 @@ $primary-invert: $pink-invert;
 // 4. Import the rest of Bulma
 */
 /*! bulma.io v0.7.2 | MIT License | github.com/jgthms/bulma */
+:root{
+  --gradient: linear-gradient(-45deg, #e8e732, #ff9900, #ff004e, #fd00a0, #4e0af0 );
+}
+/*  */
+/* #16f17c, #bec400, #ff8000, #ff0073, #f00ae8 */
+ 
+
 @-webkit-keyframes spinAround {
   from {
     -webkit-transform: rotate(0deg);
@@ -6874,4 +6881,16 @@ label.panel-block {
   text-align: center; 
   margin: 0; padding: 30px 0;
   background-image: linear-gradient(to bottom, transparent, #b8bdbc);
+}
+
+#hero-tag{
+  background-size: 400%;
+  background-image: var(--gradient);
+  animation: hero-bg-animation 30s infinite;
+}
+
+@keyframes hero-bg-animation {
+  0% {background-position: left}
+  50% {background-position: right}
+  100% {background-position: left}
 }
