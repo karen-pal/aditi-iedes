@@ -6894,3 +6894,13 @@ label.panel-block {
   50% {background-position: right}
   100% {background-position: left}
 }
+
+.has-margin-rigth{
+  margin-right: 2rem;
+}
+
+.categoria-box{
+  max-height: 450px;
+  position: relative;
+  overflow: hidden;
+}
