@@ -6807,7 +6807,7 @@ label.panel-block {
   padding: 3rem 1.5rem 6rem; }
 
 .hero{
-  background: url(../img/hero1.svg) top/ cover;
+  background: url(../img/hero1.svg) center/ cover;
 }
 
 .bold{
@@ -6903,4 +6903,21 @@ label.panel-block {
   max-height: 450px;
   position: relative;
   overflow: hidden;
+}
+
+.sin-estilo-link{
+  list-style: none;
+  text-decoration:none;
+}
+
+.space-arround{
+  justify-content: space-around;
+}
+
+.tag-max-width{
+  max-width: 150px;
+}
+
+.home-medio{
+  margin: 2rem 5rem;
 }
