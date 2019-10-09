@@ -81,6 +81,7 @@ header{
 .articulo-destacado-titulo{
     text-align: right;
     font-size: 5vw;
+    font-family: 'PT Mono', monospace;
 }
 
 /* ----------------------------
@@ -94,13 +95,18 @@ HISTORIASSSSS
     background-color: #c3b1b1ff;
 }
 
+.home-title{
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+}
 
 .historias-title{
     margin-left: 10vw;
     font-size: 7vw;
-    background-color: black;
-    color: antiquewhite;
+    background-color: #fb6754;
+    color: #4745d1;
     z-index: 2;
+
 }
 
 .historia-img{
@@ -161,13 +167,54 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
     height: 75vh;
 }
 
-
-
-.ultimos-articulos{
-    background-color: #8040b473;
+.fem-title{
+    background-color:  #04284a;
+    color: #ff294c;
 }
 
 
+/* ------------------------------------------------ */
+.ultimos-articulos{
+    background-color: #04284a;
+    position: absolute;
+}
+
+.title-ultimos-articulos{
+    font-size: 13rem;
+    text-align: center;
+    padding: 1rem;
+    color:#ffe600;
+}
+
+
+.container-ultimos-articulos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
+    z-index: 2;
+    margin-top: -19vh;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(233, 202, 202);
+    text-align: center;
+    line-height: 2rem;
+}
+
+.card1{
+    background-color: crimson;
+}
+
+.card2{
+    background-color: crimson;
+}
+
+.card3{
+    background-color: crimson;
+}
+
+
+/* -------ELFOOTER------------ */
 .footer{
     display: flex;
     justify-content: center;
@@ -178,7 +225,7 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
     font-size: 1.5rem;
 
 }
-@media screen and (max-width: 700px){
+/* @media screen and (max-width: 700px){
 
     .line {
         width: 30px;
@@ -221,4 +268,4 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
     
     
     
-}
+} */
