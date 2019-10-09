@@ -87,16 +87,76 @@ header{
 HISTORIASSSSS
 -------------------------------- */
 .historias-section{
-    background-image: url(/resources/historias-background.svg);
+    /* background-image: url(/resources/historias-background.svg); */
     display:flex;
     align-items: center;
     justify-content: flex-start;
+    background-color: #c3b1b1ff;
 }
+
 
 .historias-title{
-    padding-left
+    margin-left: 10vw;
+    font-size: 7vw;
+    background-color: black;
+    color: antiquewhite;
+    z-index: 2;
 }
 
+.historia-img{
+    width: 65vw;
+    height: 75vh;
+    /* margin-right: 20vw; */
+    background-image: url(/resources/historias-img.svg);
+    position: absolute;
+    left: 25vw;
+    
+}
+
+/* -----------------------------------
+DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+----------------- */
+
+.diversidad-section{
+    background-color: #e09fb4ff;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.diversidad-img{
+    background-image: url(/resources/23334025_10155340404579121_8440954999920904418_o.jpg);
+    position: absolute;
+}
+
+.diversidad-title{
+    background-color: black;
+    color: antiquewhite;
+    z-index: 2;
+    font-size: 7vw;
+    right: 40rem;
+
+}
+
+
+.feminismos-section{
+    background-color: #ff8080ff;
+}
+
+
+.ultimos-articulos{
+    background-color: #8040b473;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: lawngreen;
+    height: 50vh;
+
+}
 @media screen and (max-width: 700px){
 
     .line {
