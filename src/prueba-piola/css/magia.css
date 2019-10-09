@@ -176,7 +176,7 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 /* ------------------------------------------------ */
 .ultimos-articulos{
     background-color: #04284a;
-    position: absolute;
+    
 }
 
 .title-ultimos-articulos{
@@ -184,6 +184,7 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
     text-align: center;
     padding: 1rem;
     color:#ffe600;
+    /* position: absolute; */
 }
 
 
@@ -192,7 +193,7 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
     grid-template-columns: repeat(3,1fr);
     grid-gap: 1rem;
     z-index: 2;
-    margin-top: -19vh;
+    margin-top: -25vh;
     margin-left: 2rem;
     margin-right: 2rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
