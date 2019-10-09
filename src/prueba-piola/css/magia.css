@@ -127,26 +127,46 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 .diversidad-img{
     background-image: url(/resources/23334025_10155340404579121_8440954999920904418_o.jpg);
     position: absolute;
+    width: 25vw;
+    height: 90vh;
+    align-self: flex-start;
+    margin-right: 65vw;
+    margin-top: 5vh;
 }
+
 
 .diversidad-title{
     background-color: black;
     color: antiquewhite;
     z-index: 2;
     font-size: 7vw;
-    right: 40rem;
+    /* right: 40rem; */
+    margin-right: 25vw;
 
 }
-
+/* ---------------------------------------- */
 
 .feminismos-section{
     background-color: #ff8080ff;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
 }
+
+.femin-img{
+    background-image: url(/resources/mujeresindolentes.jpg);
+    position: absolute;
+    left: 25vw;
+    width: 65vw;
+    height: 75vh;
+}
+
 
 
 .ultimos-articulos{
     background-color: #8040b473;
 }
+
 
 .footer{
     display: flex;
@@ -155,6 +175,7 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
     background-color: black;
     color: lawngreen;
     height: 50vh;
+    font-size: 1.5rem;
 
 }
 @media screen and (max-width: 700px){
