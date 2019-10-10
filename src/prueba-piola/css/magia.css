@@ -58,7 +58,7 @@ nav{
 /* -------------------------------
 ARTICULO DESTACADO PAPA
 ------------------------------- */
-header{
+.heteronormatividad{
     background-image: url(/resources/heteronormatividad-article.svg);
 }
 
@@ -284,9 +284,36 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
     margin-right: 1rem;
 }
 
-@media screen and (max-width: 700px){
 
-    /* .line {
+/* -------------------CATEGORIASSSS------------- */
+
+.title-category{
+    font-size: 10vw;
+    text-align: center;
+    padding: 3rem;
+}
+
+.container-category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    margin: auto 10vw;
+}
+
+.article-category{
+    padding: 2rem 0;
+    border-style:  double none;
+    line-height: 2rem;
+}
+
+.category-article-title{
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 700px){
+/* 
+    .line {
         width: 30px;
         height: 3px;
         background: white;
@@ -323,7 +350,7 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
         clip-path: circle(1000px at 90% -10%);
         -webkit-clip-path: circle(1000px at 90% -10%);
         pointer-events: all;
-    } */
+    }  */
     
     
     
