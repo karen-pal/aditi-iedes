@@ -186,9 +186,9 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 }
 
 .title-ultimos-articulos{
-    font-size: 13rem;
+    font-size: 16vw;
     text-align: center;
-    padding: 1rem;
+    padding-top: 5rem;
     color:#ffe600;
     /* position: absolute; */
 }
@@ -230,6 +230,7 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
     color: lawngreen;
     height: 50vh;
     font-size: 1.5rem;
+    width: 100vw;
 
 }
 
