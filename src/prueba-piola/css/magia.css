@@ -8,7 +8,7 @@
     padding: 0;
 }
 
-
+/* -----------------NAVEGACIONLPM----------- */
 
 nav{
     background-color: transparent;
@@ -78,11 +78,17 @@ header{
     padding-right: 4vw;
 }
 
+.articulo-destacado a{
+    text-decoration: none;
+}
 .articulo-destacado-titulo{
     text-align: right;
     font-size: 5vw;
+    color: #ffe600;
+
     font-family: 'PT Mono', monospace;
 }
+
 
 /* ----------------------------
 HISTORIASSSSS
@@ -226,9 +232,61 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
     font-size: 1.5rem;
 
 }
-/* @media screen and (max-width: 700px){
 
-    .line {
+
+/* --------------ESTILOS ARTICULOS-------------------
+ */
+.article{
+    background-color: rgba(202, 195, 195, 0.829);
+}
+
+.title-article{
+    text-align: center;
+    padding-top: 7rem;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    font-size:4rem;
+    /* background-color: #04284a; */
+    color: #fb6754;
+    word-break: break-word;
+}
+.container-grid{
+    display: grid;
+    grid-template-columns: 2fr 10fr 1fr;
+    padding: 5rem 10rem;
+    grid-gap: 10px 50px;
+}
+
+.column1{
+    font-size: 2rem;
+    line-height: 3rem;
+
+}
+
+.column2{
+    line-height: 4rem;
+    font-size: 1.5rem;
+}
+
+.break{
+    display: block;
+}
+
+.parrafo{
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+}
+
+.first-letter::first-letter{
+    font-size:6rem;
+    float: left;
+    margin-top: 1.75rem; 
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 700px){
+
+    /* .line {
         width: 30px;
         height: 3px;
         background: white;
@@ -265,8 +323,8 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
         clip-path: circle(1000px at 90% -10%);
         -webkit-clip-path: circle(1000px at 90% -10%);
         pointer-events: all;
-    }
+    } */
     
     
     
-} */
+}
