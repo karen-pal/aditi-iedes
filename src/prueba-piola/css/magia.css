@@ -138,11 +138,11 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 
 .diversidad-img{
     background-image: url(../resources/23334025_10155340404579121_8440954999920904418_o.jpg);
-    position: absolute;
+    float: right;
     width: 25vw;
     height: 90vh;
     align-self: flex-start;
-    margin-right: 60%;
+    margin-right: -30px;
     margin-top: 5vh;
 }
 
