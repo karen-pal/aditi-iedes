@@ -239,6 +239,7 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
  */
 .article{
     background-color: rgba(202, 195, 195, 0.829);
+    width: 100vw;
 }
 
 .title-article{
