@@ -467,5 +467,16 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
         align-self: center;
     }
         
+    .container-ultimos-articulos{
+        grid-template-columns: 1fr;
+        margin-top: 0;
+    }
     
+    .ultimos-articulos{
+        height: 100%;
+        padding: 7vh 0vw;
+    }
+    .title-ultimos-articulos{
+        padding-top: 0;
+    }
 }
