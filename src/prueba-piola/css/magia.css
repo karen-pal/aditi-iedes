@@ -373,7 +373,7 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
     color: #fb6754;
     word-break: break-word;
 }
-.container-grid{
+.container-grid-article{
     display: grid;
     grid-template-columns: 2fr 10fr 1fr;
     padding: 5rem 10rem;
@@ -478,5 +478,23 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
     }
     .title-ultimos-articulos{
         padding-top: 0;
+    }
+
+    .container-grid-article{
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    .container-grid-article .column2{
+        font-size: 1.15rem;
+    }
+
+    .container-grid-article .column1{
+        font-size: 1.25rem;
+    }
+
+    .title-article{
+        font-size: 2.5rem;
+        padding: 2rem 1rem;
     }
 }
