@@ -160,6 +160,7 @@ i {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: inherit;
 }
 
 /* -------------------------------
@@ -167,6 +168,8 @@ ARTICULO DESTACADO PAPA
 ------------------------------- */
 .heteronormatividad{
     background-image: url(../resources/heteronormatividad-article.svg);
+    width: 100%;
+    height: auto;
 }
 
 .articulo-destacado{
@@ -214,11 +217,13 @@ HISTORIASSSSS
 }
 
 .historias-title{
-    margin-left: 10vw;
+    margin-left: 2vw;
     font-size: 7vw;
     background-color: #fb6754;
     color: #4745d1;
     z-index: 2;
+    padding-right: 10vw;
+    padding-left: 10vw;
 
 }
 
@@ -243,18 +248,22 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
     display:flex;
     align-items: center;
     justify-content: flex-end;
+    
 }
 
 .diversidad-img{
-    background-image: url(../resources/23334025_10155340404579121_8440954999920904418_o.jpg);
-    float: right;
-    width: 25vw;
-    height: 90vh;
-    align-self: flex-start;
-    margin-right: -30px;
-    margin-top: 5vh;
+    /* background-image: url(../resources/VICTOR-HUGO-ROBLES.jpg); */
+    float: left;
+    width: 60vw;
+    height: auto;
+    align-self: center;
+    /* margin-right: -15vw;
+    margin-left: 8vw;
+    margin-top: 15vh; */
+    position: absolute;
+    order: -1;
+    margin-right: 70vh;
 }
-
 
 .diversidad-title{
     background-color: black;
@@ -262,8 +271,10 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
     z-index: 2;
     font-size: 7vw;
     /* right: 40rem; */
-    margin-right: 25vw;
-
+    /* margin-right: 25vw; */
+    position: absolute;
+    padding-left: 15vw;
+    padding-right: 10vw;
 }
 /* ---------------------------------------- */
 
@@ -423,20 +434,38 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
     font-size: 2rem;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 800px){
 
     .articulo-destacado-titulo{
-        font-size: 2rem;
+        font-size: 8vw;
     }
     
+    .historia-img,
+    .fem-img,
+    .diversidad-img{
+        display: none;
+    }
+
+    .historias-section{
+        background-image: url(../resources/historias-ventana.svg);
+        padding: 0;
+    }
+
+    .feminismos-section{
+        background-image: url(../resources/mujeres-indolentes.svg)
+    }
+    
+    .diversidad-section{
+        background-image: url(../resources/VICTOR-HUGO-ROBLES.jpg)
+
+    }
+
     .historias-title,
     .diversidad-title,
     .fem-title{
-        font-size:3rem;
+        font-size:10vw;
+        align-self: center;
     }
         
-    .fem-img{
-        width: 80vw;
-        margin-left: 15vw;
-    }
+    
 }
