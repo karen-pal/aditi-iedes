@@ -27,12 +27,20 @@ ul i {
     padding: 0;
     margin-right: 0.3em;
     padding-right: 0;
+
   }
   
 li {
     list-style-type: none;
     padding: 1em 0;
   }
+
+li a{
+    text-decoration: none;
+    color: #04284a;
+    font-size: 2rem;
+    line-height: 4rem;
+}
   
 i {
     padding: 1em;
@@ -57,6 +65,7 @@ i {
     max-width: 400px;
     text-align: center;
     box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+    z-index:45;
   }
   
 .nav:not(:target) {
@@ -125,34 +134,7 @@ i {
     100% {
       transform: scale(1);
     }
-  }
-
-
-
-
-
-
-/*
-nav{
-    background-color: transparent;
-    padding: 1rem;
-    height: 4rem;
 }
-
-.nav-links{
-    display: flex;
-    list-style: none;
-    height: 2rem;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem;
-}
-
-.nav-text{
-    color:white;
-    text-decoration: none;
-}
-
 
 
 .text-align-rigth{
@@ -161,7 +143,7 @@ nav{
 .img-iedes{
     height: 100%;
     width: 2rem;
-} */
+}
 /* ------------------------------------------ */
 /* NAVBAR LA PUTA QUE TE PARIO */
 /* ------------------------------------------ */
@@ -322,9 +304,9 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
     grid-template-columns: repeat(3,1fr);
     grid-gap: 1rem;
     z-index: 2;
-    margin-top: -25vh;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-top: -20vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:rgb(233, 202, 202);
     text-align: center;
@@ -437,46 +419,15 @@ DIVERSIDADDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 }
 
 @media screen and (max-width: 700px){
-/* 
-    .line {
-        width: 30px;
-        height: 3px;
-        background: white;
-        margin: 3px;
-    }
 
-
-    nav {
-        position: relative;
+    .articulo-destacado-titulo{
+        font-size: 2rem;
     }
     
-    .hamburger {
-        position: absolute;
-        cursor: pointer;
-        right: 5%;
-        top: 50%;
-        transform: translate(-5%, -50%);
-        z-index: 2;
+    .historias-title,
+    .diversidad-title,
+    .fem-title{
+        font-size:3rem;
     }
-    
-    .nav-links {
-        position: fixed;
-        background: var(--nav-background-color);
-        height: 100vh;
-        width: 100%;
-        flex-direction: column;
-        clip-path: circle(1000px at 90% -10%);
-        -webkit-clip-path: circle(1000px at 90% -10%);
-        transition: all 2s ease-out;
-        pointer-events: none;
-    }
-
-    .nav-links.open {
-        clip-path: circle(1000px at 90% -10%);
-        -webkit-clip-path: circle(1000px at 90% -10%);
-        pointer-events: all;
-    }  */
-    
-    
-    
+        
 }
