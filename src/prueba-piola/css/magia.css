@@ -162,6 +162,10 @@ i {
     width: 100vw;
 }
 
+.no-a-decor{
+  text-decoration: none;
+}
+
 .background-full-screen{
     background-size: cover;
     background-position: center center;
