@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>GENEROS</title>
         <link rel="stylesheet" href="css/magia.css">
+        <link rel="stylesheet" href="aos-master/dist/aos.css">
     </head>
 
     <body>
@@ -42,14 +43,14 @@
         <section class="historias-section is-full-size background-full-screen ">
             <p class="historias-title home-title">HISTORIAS</p>
             <!-- <div class="historia-img background-full-screen" > </div> -->
-            <img class="historia-img" src="resources/historias-ventana.svg" alt="" >
+            <img class="historia-img"  data-aos="fade-right" src="resources/historias-ventana.svg" alt="" >
         </section>
 
         <section class="diversidad-section is-full-size background-full-screen ">
                 <!-- <div class="diversidad-img "></div> -->
-            <p class="diversidad-title home-title">DIVERSIDAD</p>
+            <p class="diversidad-title home-title" data-aos="fade-left" >DIVERSIDAD</p>
 
-            <img class="diversidad-img"" src="resources/VICTOR-HUGO-ROBLES.jpg" alt="" >
+            <img class="diversidad-img"   src="resources/VICTOR-HUGO-ROBLES.jpg" alt="" >
 
             
         </section>
@@ -57,7 +58,7 @@
         <section class="feminismos-section is-full-size background-full-screen">
             <p class="historias-title fem-title home-title">FEMINISMOS</p>
             <!-- <div class="femin-img background-full-screen"></div> -->
-            <img class="fem-img" src="resources/mujeres-indolentes.svg" alt="mujeres indolentes">
+            <img class="fem-img"  data-aos="fade-right" src="resources/mujeres-indolentes.svg" alt="mujeres indolentes">
         </section>
 
         <section class="ultimos-articulos is-full-size background-full-screen">
@@ -84,13 +85,12 @@
                 <p>Yo y la monada</p>
             </footer>
         </div>
-        
+    <script src="aos-master/dist/aos.js"></script>
     </body>
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|PT+Mono&display=swap" rel="stylesheet"> 
-    <script id="__bs_script__">//<![CDATA[
-        document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
-    //]]></script>
+   
     <script src="js/magia-oscura.js"></script>
+    <script>AOS.init();</script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
     
